@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificações</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header .icon {
+            color: #ff0000;
+            font-size: 24px;
+        }
+        .title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff0000;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="icon">&#x1F3E0;</div>
+            <div class="arrows">
+                <span class="icon">&#x3C;</span>
+                <span class="icon">&#x3E;</span>
+            </div>
+            <div class="icon">&#x2630;</div>
+        </div>
+        <div class="title">ESPECIFICAÇÕES</div>
+        <div class="form-group">
+            <label for="tipo">TIPO</label>
+            <input type="text" id="tipo" name="tipo">
+        </div>
+        <div class="form-group">
+            <label for="fabricante">FABRICANTE</label>
+            <input type="text" id="fabricante" name="fabricante">
+        </div>
+        <div class="form-group">
+            <label for="capacidade">CAPACIDADE</label>
+            <input type="text" id="capacidade" name="capacidade">
+        </div>
+        <div class="form-group">
+            <label for="bitola">BITOLA</label>
+            <input type="text" id="bitola" name="bitola">
+        </div>
+        <div class="form-group">
+            <label for="observacoes">OBSERVAÇÕES</label>
+            <textarea id="observacoes" name="observacoes"></textarea>
+        </div>
+        <div class="button-group">
+            <button class="button" onclick="save()">Salvar</button>
+            <button class="button" onclick="clearForm()">Limpar</button>
+        </div>
+    </div>
+
+    <script>
+        function save() {
+            alert('Dados salvos!');
+        }
+
+        function clearForm() {
+            document.getElementById('tipo').value = '';
+            document.getElementById('fabricante').value = '';
+            document.getElementById('capacidade').value = '';
+            document.getElementById('bitola').value = '';
+            document.getElementById('observacoes').value = '';
+        }
+    </script>
+</body>
+</html>
